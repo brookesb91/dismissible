@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dismissible</title>
+  <link rel="stylesheet" href="../src/dismissible.css">
+  <link rel="stylesheet" href="demo.css">
+  <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div id="dismissible-container"></div>
+
+  <div class="triggers">
+    <button class="trigger info">Show Info</button>
+    <button class="trigger success">Show Success</button>
+    <button class="trigger error">Show Error</button>
+  </div>
+
+  <script type="text/javascript">
+    window.onload = function () {
+      const dismissible = new Dismissible(document.querySelector('#dismissible-container'));
+
+      document.querySelector('.trigger.info').addEventListener('click', () => dismissible.info(
+        'This is an informational alert!'));
+
+      document.querySelector('.trigger.success').addEventListener('click', () => dismissible.success(
+        'Everything was okay!'));
+
+      document.querySelector('.trigger.error').addEventListener('click', () => dismissible.error(
+        'Oops! Something went wrong...'));
+    };
+  </script>
+
+  <script src="../src/dismissible.js"></script>
+</body>
+
+</html>

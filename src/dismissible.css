@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
+
+:root {
+  /* Animation Props */
+  --dismissible-animation-overshoot: 10%;
+  --dismissible-animation-duration: 0.6s;
+  --dismissible-animation-timing-function: ease-in-out;
+  /* Theme Props */
+  --dismissible-background-error: #ed1c24;
+  --dismissible-color-error: #fff;
+  --dismissible-background-success: #10c15c;
+  --dismissible-color-success: #fff;
+  --dismissible-background-info: #0b22e2;
+  --dismissible-color-info: #fff;
+  /* Misc */
+  --dismissible-box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.dismissible-container {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.dismissible {
+  position: relative;
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transform: translateY(-100%);
+  animation-name: drop-in;
+  animation-direction: normal;
+  animation-duration: var(--dismissible-animation-duration);
+  animation-timing-function: var(--dismissible-animation-timing-function);
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  box-shadow: var(--dismissible-box-shadow);
+}
+
+.dismissible .dismissible-message {
+  flex: 1;
+  padding: 0 2rem;
+  font-size: 1.25rem;
+}
+
+.dismissible::after {
+  content: "";
+  position: absolute;
+  height: var(--dismissible-animation-overshoot);
+  width: 100%;
+  bottom: 100%;
+  left: 0;
+}
+
+.dismissible.error {
+  background: var(--dismissible-background-error);
+  color: var(--dismissible-color-error);
+}
+
+.dismissible.error::after {
+  background: var(--dismissible-background-error);
+}
+
+.dismissible.info {
+  background: var(--dismissible-background-info);
+  color: var(--dismissible-color-info);
+}
+
+.dismissible.info::after {
+  background: var(--dismissible-background-info);
+}
+
+.dismissible.success {
+  background: var(--dismissible-background-success);
+  color: var(--dismissible-color-success);
+}
+
+.dismissible.success::after {
+  background: var(--dismissible-background-success);
+}
+
+.dismiss {
+  color: inherit;
+  appearance: none;
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  background: inherit;
+}
+
+.dismiss:hover {
+  background: rgba(0, 0, 0, 0.12);
+}
+
+@keyframes drop-in {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  50% {
+    transform: translateY(var(--dismissible-animation-overshoot));
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
