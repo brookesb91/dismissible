@@ -38,7 +38,7 @@ const container = document.querySelector('#dismissible-container');
 const dismissible = new Dismissible(container);
 ```
 
-Show dismissibles
+## Show dismissibles
 
 ```js
 // Show informational prompt
@@ -51,7 +51,13 @@ dismissible.success('This is a success alert.');
 dismissible.error('This is an error alert.');
 ```
 
-Hide dismissibles
+![Info](/images/info.PNG)
+
+![Success](/images/success.PNG)
+
+![Error](/images/error.PNG)
+
+## Hide dismissibles
 
 > Dismissibles are dismissed when their dismiss button is clicked. However it is possible to dismiss them on demand.
 
