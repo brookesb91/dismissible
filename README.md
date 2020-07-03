@@ -1,3 +1,5 @@
+![Dismissible](/images/header.PNG)
+
 # dismissible
 
 Dismissible animated alert banners written in plain ol' JavaScript.
