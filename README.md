@@ -4,7 +4,7 @@ Dismissible animated alert banners written in plain ol' JavaScript.
 
 ## Quick Start
 
-### Include the dismissible styles in your `HEAD` tag
+Include the dismissible styles in your `HEAD` tag
 
 ```html
 <head>
@@ -13,7 +13,7 @@ Dismissible animated alert banners written in plain ol' JavaScript.
 </head>
 ```
 
-### Include the dismissible script at the bottom of your `BODY` tag
+Include the dismissible script at the bottom of your `BODY` tag
 
 ```html
 <body>
@@ -22,7 +22,7 @@ Dismissible animated alert banners written in plain ol' JavaScript.
 </body>
 ```
 
-### Add an element that will be used as the root container for dismissibles
+Add an element that will be used as the root container for dismissibles
 
 ```html
 <body>
@@ -31,14 +31,14 @@ Dismissible animated alert banners written in plain ol' JavaScript.
 </body>
 ```
 
-### Create a `Dismissible` instance
+Create a `Dismissible` instance
 
 ```js
 const container = document.querySelector('#dismissible-container');
 const dismissible = new Dismissible(container);
 ```
 
-### Show dismissibles
+Show dismissibles
 
 ```js
 // Show informational prompt
@@ -51,7 +51,7 @@ dismissible.success('This is a success alert.');
 dismissible.error('This is an error alert.');
 ```
 
-### Hide dismissibles
+Hide dismissibles
 
 > Dismissibles are dismissed when their dismiss button is clicked. However it is possible to dismiss them on demand.
 
