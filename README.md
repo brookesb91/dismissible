@@ -9,7 +9,7 @@ Dismissible animated alert banners written in plain ol' JavaScript.
 ### Install with Node
 
 ```shell
-$npm i https://github.com/brookesb91/dismissible/releases/download/v1.0.0/dismissible-1.0.0.tgz
+$ npm i https://github.com/brookesb91/dismissible/releases/download/v1.0.0/dismissible-1.0.0.tgz
 ```
 
 Include the dismissible styles in your `HEAD` tag
