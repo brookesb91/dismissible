@@ -16,10 +16,11 @@
 
 .dismissible-container {
   margin: 0;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 999999;
 }
 
 .dismissible {
