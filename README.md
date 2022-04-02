@@ -73,7 +73,7 @@ dismissible.error('This is an error alert.');
 dismissible.dismiss();
 ```
 
-## Custom Icons
+## Custom icons
 
 > By default, dismissible use [Lineicons](https://lineicons.com/) library. You can easily replace the icons for a library of your preference.
 
@@ -95,7 +95,7 @@ const dismissible = new Dismissible(container,
     icons: {
       dismiss: ["fas", "fa-times"], // Close icon classes
       info: ["fas", "fa-info"], // Info icon classes
-      success: ["fas", "fa-check"], // Sucess icon classes
+      success: ["fas", "fa-check"], // Success icon classes
       error: ["fas", "fa-exclamation"], // Error icon classes
     },
   }
