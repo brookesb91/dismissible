@@ -72,3 +72,35 @@ dismissible.error('This is an error alert.');
 ```js
 dismissible.dismiss();
 ```
+
+## Custom Icons
+
+> By default, dismissible use [Lineicons](https://lineicons.com/) library. You can easily replace the icons for a library of your preference.
+
+Include your custom css icons library in your `HEAD` tag
+
+```html
+<head>
+  <!-- Other head stuff... -->
+  <link rel="stylesheet" href="path/to/your/css/icons/library.css" />
+</head>
+```
+
+Add an object with icons classes array to replace the default values
+
+```js
+const container = document.querySelector('#dismissible-container');
+const dismissible = new Dismissible(container,
+  {
+    icons: {
+      dismiss: ["fas", "fa-times"], // Close icon classes
+      info: ["fas", "fa-info"], // Info icon classes
+      success: ["fas", "fa-check"], // Sucess icon classes
+      error: ["fas", "fa-exclamation"], // Error icon classes
+    },
+  }
+);
+
+
+```
+
