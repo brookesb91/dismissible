@@ -1,7 +1,7 @@
 on:
   push:
-    branches:
-      - master
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+'
 name: Release
 jobs:
   build:
@@ -29,6 +29,6 @@ jobs:
       - name: Push To Release
         uses: ncipollo/release-action@v1.8.0
         with:
-          artifacts: "dist/dismissible-1.0.0.tgz"
+          artifacts: 'dist/dismissible-${{ github.ref_name }}.tgz'
           token: ${{ secrets.token }}
-          tag: v1.0.0
+          tag: ${{ github.ref_name }}
